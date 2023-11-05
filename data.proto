@@ -1,0 +1,22 @@
+syntax = "proto3"; 
+
+service DataService {
+  rpc Insert (User) returns (User) {}
+  rpc Find (UserId) returns (User) {}
+  rpc FindAll (Empty) returns (UserList) {}
+}
+
+message Empty {}
+
+message User {
+  int32 id = 1;
+  string name = 2;
+}
+
+message UserId {
+  int32 id = 1;
+}
+
+message UserList {
+  repeated User users = 1;
+}
