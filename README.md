@@ -2,14 +2,6 @@
 
 Exemplo de uso de comunicação gRPC manipulando uma lista de usuários estáticos.
 
-`
-service DataService {
-  rpc Insert (User) returns (User) {}
-  rpc Find (UserId) returns (User) {}
-  rpc FindAll (Empty) returns (UserList) {}
-}
-`
-
 ## Servidor
 
 `node server` 
@@ -17,3 +9,14 @@ service DataService {
 ## Cliente
 
 `node client`
+
+### Services
+
+`Insert(User)`
+`Find(User)`
+`FindAll(Empty)`
+
+#### Incluir
+
+`Update(User)`
+`Delete(User)`
